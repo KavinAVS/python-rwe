@@ -9,8 +9,8 @@ import rwepy.helper as h
 from rwepy.PCIeRegisters import PCIeRegisters
 
 rwe = RWE()
-dg2 = rwe.find_device(0x10DE, 0x2484) # Device Upstream port
-start_device = dg2.upstream
+device = rwe.find_device(0x10DE, 0x2484) # Device Upstream port
+start_device = device.upstream
 
 for device in start_device.get_flat_device_list():
 
